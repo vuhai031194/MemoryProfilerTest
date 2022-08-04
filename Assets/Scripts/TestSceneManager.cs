@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Dynamic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,7 +12,7 @@ public class TestSceneManager : MonoBehaviour
 
     private int _pictureIndex = 1;
 
-    private static List<Sprite> _sprites = new List<Sprite>(3);
+    private List<Sprite> _sprites = new List<Sprite>(3);
 
     public void OnEnable()
     {
@@ -24,14 +23,6 @@ public class TestSceneManager : MonoBehaviour
                 var sprite = Resources.Load<Sprite>($"Textures/{i + 1}");
                 _sprites.Add(sprite);
             }
-        }
-    }
-
-    private void OnDisable()
-    {
-        if (_sprites.Count > 0)
-        {
-            _sprites.Clear();
         }
     }
 

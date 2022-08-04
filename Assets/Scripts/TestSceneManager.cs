@@ -27,14 +27,6 @@ public class TestSceneManager : MonoBehaviour
         }
     }
 
-    private void OnDisable()
-    {
-        if (_sprites.Count > 0)
-        {
-            _sprites.Clear();
-        }
-    }
-
     public void ClickNext()
     {
         ++_pictureIndex;
